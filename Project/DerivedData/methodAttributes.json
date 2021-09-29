@@ -1,0 +1,37 @@
+{
+	"methods": {
+		"MailChimp": {
+			"timeStamp": "2021-09-28T15:30:10.443Z"
+		},
+		"Zoom": {
+			"timeStamp": "2021-09-27T14:05:10.933Z"
+		},
+		"Shopify": {
+			"timeStamp": "2021-09-28T15:41:03.829Z"
+		},
+		"zoom_RegistrantGet": {
+			"timeStamp": "2021-09-27T13:04:12.425Z"
+		},
+		"USPS": {
+			"timeStamp": "2021-09-27T13:00:04.651Z"
+		},
+		"UPSWorldShip": {
+			"timeStamp": "2021-09-27T13:26:56.455Z"
+		},
+		"ShipEngine": {
+			"timeStamp": "2021-09-28T15:30:10.437Z"
+		},
+		"zoom_WebinarGet": {
+			"timeStamp": "2021-09-27T13:04:43.498Z"
+		},
+		"Docusign": {
+			"timeStamp": "2021-09-27T12:59:52.282Z"
+		},
+		"zoom_Connect": {
+			"timeStamp": "2021-09-28T15:55:41.602Z"
+		},
+		"zoom_ParticipantGet": {
+			"timeStamp": "2021-09-27T13:03:47.253Z"
+		}
+	}
+}
