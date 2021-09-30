@@ -10,7 +10,7 @@
 //
 // Parameters
 // ----------------------------------------------------
-
+C_TEXT:C284($base_URL; $API_Key)
 //curl -sS -X POST "https://mandrillapp.com/api/1.0/users/ping" \
   --header 'Content-Type: application/json' \
   --data-raw '{ "key": "YOUR_API_KEY" }'
@@ -32,7 +32,6 @@ If ($vbContinue)
 	
 	APPEND TO ARRAY:C911($hdr_names; "Accept-Language")
 	APPEND TO ARRAY:C911($hdr_values; "en-US")
-	
 	
 	$status:=HTTP Request:C1158($HTTP_method; $Call_URL; $request; $response; $hdr_names; $hdr_values)
 	
