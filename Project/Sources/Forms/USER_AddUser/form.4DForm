@@ -1,0 +1,439 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 500,
+	"height": 560,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDataChange",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "User-Defined",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 72,
+					"left": 27,
+					"width": 94,
+					"height": 15,
+					"sizingX": "grow",
+					"class": "Tahoma_12_Bold",
+					"textAlign": "right",
+					"text": "Last Name :",
+					"fontWeight": "bold"
+				},
+				"user_lastName_obj": {
+					"type": "input",
+					"top": 72,
+					"left": 125,
+					"width": 282,
+					"height": 15,
+					"dataSource": "Form:C1466.User.user_lastName",
+					"class": "Tahoma_12",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"user_userName_obj": {
+					"type": "input",
+					"top": 137,
+					"left": 125,
+					"width": 202,
+					"height": 15,
+					"dataSource": "Form:C1466.User.userName",
+					"class": "Tahoma_12",
+					"entryFilter": "&\"a-z;A-Z;0-9;_;.\"",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"obj.User.Pwd": {
+					"type": "input",
+					"top": 163,
+					"left": 125,
+					"width": 202,
+					"height": 15,
+					"dataSource": "Form:C1466.User.userPassword",
+					"class": "Tahoma_12",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"bttn_ChPwd": {
+					"type": "button",
+					"top": 160,
+					"left": 330,
+					"width": 64,
+					"height": 21,
+					"dataSource": "bttn_ChPwd",
+					"text": "Change",
+					"class": "Default",
+					"events": [
+						"onClick"
+					]
+				},
+				"bttnSave": {
+					"type": "button",
+					"top": 512,
+					"left": 385,
+					"width": 102,
+					"height": 30,
+					"dataSource": "bttnSave",
+					"action": "",
+					"text": "Save",
+					"class": "Eras_Bold_ITC_14",
+					"events": [
+						"onClick"
+					],
+					"defaultButton": true,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 512,
+					"left": 278,
+					"width": 102,
+					"height": 30,
+					"dataSource": "Button",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Eras_Bold_ITC_14",
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 137,
+					"left": 27,
+					"width": 94,
+					"height": 15,
+					"sizingX": "grow",
+					"class": "Tahoma_12_Bold",
+					"textAlign": "right",
+					"text": "Username :",
+					"fontWeight": "bold"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 163,
+					"left": 27,
+					"width": 94,
+					"height": 15,
+					"sizingX": "grow",
+					"class": "Tahoma_12_Bold",
+					"textAlign": "right",
+					"text": "Password :",
+					"fontWeight": "bold"
+				},
+				"Text": {
+					"type": "text",
+					"top": 18,
+					"left": 69,
+					"width": 251,
+					"height": 27,
+					"sizingX": "grow",
+					"class": "Eras_Bold_ITC_22",
+					"text": "System Users",
+					"fontFamily": "Eras Bold ITC",
+					"fontSize": 22
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 11,
+					"left": 10,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Users Icon.png"
+				},
+				"Line": {
+					"type": "line",
+					"top": 47,
+					"left": 63,
+					"width": 425,
+					"height": 1
+				},
+				"Line1": {
+					"type": "line",
+					"top": 52,
+					"left": 63,
+					"width": 425,
+					"height": 1
+				},
+				"Text4": {
+					"type": "text",
+					"top": 194,
+					"left": 27,
+					"width": 94,
+					"height": 15,
+					"sizingX": "grow",
+					"class": "Tahoma_12_Bold",
+					"textAlign": "right",
+					"text": "User Group :",
+					"fontWeight": "bold"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 135,
+					"left": 373,
+					"width": 154,
+					"height": 17,
+					"dataSource": "Form:C1466.User.userActive",
+					"text": "Active",
+					"class": "Tahoma_12_Bold",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 95,
+					"left": 27,
+					"width": 94,
+					"height": 15,
+					"sizingX": "grow",
+					"class": "Tahoma_12_Bold",
+					"textAlign": "right",
+					"text": "First Name :",
+					"fontWeight": "bold"
+				},
+				"user_firstName_obj": {
+					"type": "input",
+					"top": 95,
+					"left": 125,
+					"width": 282,
+					"height": 15,
+					"dataSource": "Form:C1466.User.user_firstName",
+					"class": "Tahoma_12",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"lbUserGroupobj": {
+					"type": "listbox",
+					"left": 72,
+					"top": 217,
+					"width": 372,
+					"height": 270,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "lbUserGroup",
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Group",
+								"name": "Header1",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "atGroup_Name",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"width": 286,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": ""
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "ablGroup_isMember",
+							"dataSourceTypeHint": "boolean",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"width": 69
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "group ID h"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "anGroup_ID",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"enterable": false,
+							"visibility": "hidden"
+						}
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 533,
+					"left": 10,
+					"width": 124,
+					"height": 15,
+					"dataSource": "Form:C1466.User.userID",
+					"class": "Tahoma_12",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"enterable": false,
+					"visibility": "hidden"
+				},
+				"obj.PostVis_Text1": {
+					"type": "text",
+					"top": 494,
+					"left": 101,
+					"width": 33,
+					"height": 14,
+					"class": "Tahoma_11_Bold",
+					"textAlign": "center",
+					"text": "Add "
+				},
+				"obj.PostVis_Add": {
+					"type": "picture",
+					"top": 493,
+					"left": 81,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_GreenPlus_a.4DMemoryBitmap"
+				},
+				"obj.PostVis_Text2": {
+					"type": "text",
+					"top": 494,
+					"left": 171,
+					"width": 53,
+					"height": 14,
+					"class": "Tahoma_11_Bold",
+					"textAlign": "center",
+					"text": "Remove "
+				},
+				"obj.PostVis_Picture8": {
+					"type": "picture",
+					"top": 493,
+					"left": 153,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_WinDelete_a.4DMemoryBitmap"
+				},
+				"bttnGroupAdd": {
+					"type": "button",
+					"top": 489,
+					"left": 70,
+					"width": 74,
+					"height": 24,
+					"dataSource": "bttnGroupAdd",
+					"class": "Default",
+					"focusable": false,
+					"text": "Add Group",
+					"events": [
+						"onClick"
+					]
+				},
+				"bttnGroupRemove": {
+					"type": "button",
+					"top": 489,
+					"left": 148,
+					"width": 93,
+					"height": 24,
+					"dataSource": "bttnGroupRemove",
+					"class": "Default",
+					"focusable": false,
+					"text": "Remove Group",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"user_lastName_obj",
+				"user_firstName_obj",
+				"user_userName_obj",
+				"obj.User.Pwd",
+				"bttn_ChPwd",
+				"Check Box",
+				"lbUserGroupobj",
+				"bttnSave",
+				"Button1",
+				"Variable3",
+				"bttnGroupAdd",
+				"bttnGroupRemove"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 89,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

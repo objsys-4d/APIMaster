@@ -1,0 +1,435 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 720,
+	"height": 500,
+	"menuBar": "Barre #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "User-Defined",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button1": {
+					"type": "button",
+					"top": 457,
+					"left": 578,
+					"width": 122,
+					"height": 30,
+					"dataSource": "Button",
+					"action": "cancel",
+					"text": "Close",
+					"class": "Eras_Bold_ITC_16",
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"obj.PostVis_Text1": {
+					"type": "text",
+					"top": 458,
+					"left": 53,
+					"width": 33,
+					"height": 14,
+					"class": "Tahoma_11_Bold",
+					"textAlign": "center",
+					"text": "Add "
+				},
+				"obj.PostVis_Add": {
+					"type": "picture",
+					"top": 457,
+					"left": 33,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_GreenPlus_a.4DMemoryBitmap"
+				},
+				"obj.PostVis_Text2": {
+					"type": "text",
+					"top": 458,
+					"left": 123,
+					"width": 53,
+					"height": 14,
+					"class": "Tahoma_11_Bold",
+					"textAlign": "center",
+					"text": "Remove "
+				},
+				"obj.PostVis_Picture8": {
+					"type": "picture",
+					"top": 457,
+					"left": 105,
+					"width": 16,
+					"height": 16,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Fnd_Bttn_16_WinDelete_a.4DMemoryBitmap"
+				},
+				"bttnUserAdd": {
+					"type": "button",
+					"top": 453,
+					"left": 22,
+					"width": 74,
+					"height": 24,
+					"dataSource": "bttnUserAdd",
+					"class": "Default",
+					"focusable": false,
+					"text": "Add User",
+					"events": [
+						"onClick"
+					]
+				},
+				"bttnUserRemove": {
+					"type": "button",
+					"top": 453,
+					"left": 100,
+					"width": 79,
+					"height": 24,
+					"dataSource": "bttnUserRemove",
+					"class": "Default",
+					"focusable": false,
+					"text": "Remove User",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 15,
+					"left": 71,
+					"width": 251,
+					"height": 27,
+					"sizingX": "grow",
+					"class": "Eras_Bold_ITC_22",
+					"text": "System Users",
+					"fontFamily": "Eras Bold ITC",
+					"fontSize": 24
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 9,
+					"left": 12,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Users Icon.png"
+				},
+				"Line": {
+					"type": "line",
+					"top": 45,
+					"left": 65,
+					"width": 625
+				},
+				"Line1": {
+					"type": "line",
+					"top": 50,
+					"left": 65,
+					"width": 625
+				},
+				"systemUserlb": {
+					"type": "listbox",
+					"top": 67,
+					"left": 21,
+					"width": 677,
+					"height": 383,
+					"resizingMode": "legacy",
+					"dataSource": "Form:C1466.systemUserlb.data",
+					"rowHeight": "20px",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"fontFamily": "Eras Bold ITC",
+					"fontSize": 24,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"currentItemSource": "Form:C1466.systemUserlb.item",
+					"currentItemPositionSource": "Form:C1466.systemUserlb.position",
+					"selectedItemsSource": "Form:C1466.systemUserlb.selected",
+					"selectionMode": "single",
+					"columns": [
+						{
+							"name": "user_lastName_obj",
+							"width": 160,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "Last Name",
+								"dataSource": "hLName",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer10",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Eras Bold ITC",
+								"fontSize": 24
+							},
+							"dataSource": "This:C1470.user_lastName"
+						},
+						{
+							"name": "Column8",
+							"width": 160,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "First Name",
+								"dataSource": "hFName",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer8",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Eras Bold ITC",
+								"fontSize": 24
+							},
+							"dataSource": "This:C1470.user_firstName"
+						},
+						{
+							"name": "Column9",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "System User Name",
+								"dataSource": "hSName",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer9",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Eras Bold ITC",
+								"fontSize": 24
+							},
+							"dataSource": "This:C1470.userName"
+						},
+						{
+							"name": "Column11",
+							"width": 90,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "Last Login",
+								"dataSource": "hLastLog",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Eras Bold ITC",
+								"fontSize": 24
+							},
+							"dataSource": "This:C1470.userLastLogin",
+							"dataSourceTypeHint": "date"
+						},
+						{
+							"name": "userActive_obj",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": true,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"textAlign": "center",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Status",
+								"dataSource": "hStat",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Eras Bold ITC",
+								"fontSize": 24
+							},
+							"dataSource": "This:C1470.userActive",
+							"dataSourceTypeHint": "boolean",
+							"rowStyleSource": "",
+							"controlTitle": "Active"
+						},
+						{
+							"name": "Column13",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "Password (h)",
+								"dataSource": "Header4",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer13",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Eras Bold ITC",
+								"fontSize": 24
+							},
+							"dataSource": "This:C1470.userPassword"
+						},
+						{
+							"name": "Column14",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Tahoma",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header14",
+								"text": "ID (h)",
+								"dataSource": "Header5",
+								"stroke": "#000000",
+								"fontFamily": "Tahoma",
+								"fontSize": 12,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Eras Bold ITC",
+								"fontSize": 24
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 104
+}

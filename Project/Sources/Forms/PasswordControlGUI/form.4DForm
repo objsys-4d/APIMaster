@@ -1,0 +1,360 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"ListboxPasswordControlGUI": {
+					"type": "listbox",
+					"top": 89,
+					"left": 43,
+					"width": 375,
+					"height": 490,
+					"resizingMode": "legacy",
+					"dataSource": "ListboxPasswordControlGUI",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"method": "ObjectMethods/ListboxPasswordControlGUI.4dm",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "atDisplayUserName",
+							"width": 260,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "User",
+								"dataSource": "Header1"
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "adDisplayLastLogin",
+							"dataSourceTypeHint": "date",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Last Login",
+								"dataSource": "Header2"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "abDisplayUserActive",
+							"dataSourceTypeHint": "boolean",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"controlType": "checkbox",
+							"visibility": "hidden",
+							"textAlign": "center",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Active",
+								"dataSource": "Header3"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"Variable": {
+					"type": "input",
+					"top": 66,
+					"left": 43,
+					"width": 200,
+					"height": 17,
+					"dataSource": "vtNameQuery",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable.4dm",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke",
+						"onAfterEdit"
+					]
+				},
+				"ListboxPasswordControlGUIGroup": {
+					"type": "listbox",
+					"top": 89,
+					"left": 443,
+					"width": 255,
+					"height": 490,
+					"resizingMode": "legacy",
+					"dataSource": "ListboxPasswordControlGUIGroup",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"method": "ObjectMethods/ListboxPasswordControlGUIGroup.4dm",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column4",
+							"dataSource": "atUserGroup",
+							"width": 180,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "User Group",
+								"dataSource": "Header1"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column5",
+							"dataSource": "abUserGroupMember",
+							"dataSourceTypeHint": "boolean",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"controlType": "checkbox",
+							"textAlign": "center",
+							"events": [
+								"onDataChange"
+							],
+							"method": "ObjectMethods/Column5.4dm",
+							"header": {
+								"name": "Header5",
+								"text": "Member",
+								"dataSource": "Header2"
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "alGroupNumbers",
+							"dataSourceTypeHint": "number",
+							"width": 10,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "Header6",
+								"dataSource": "Header6"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 46,
+					"left": 43,
+					"width": 110,
+					"height": 17,
+					"text": "Query user"
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 66,
+					"left": 443,
+					"width": 180,
+					"height": 17,
+					"visibility": "hidden",
+					"dataSource": "vtGroupQuery",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onDataChange",
+						"onAfterKeystroke",
+						"onAfterEdit"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 46,
+					"left": 443,
+					"width": 110,
+					"height": 17,
+					"visibility": "hidden",
+					"text": "Query group"
+				},
+				"Button": {
+					"type": "button",
+					"top": 606,
+					"left": 598,
+					"width": 100,
+					"height": 29,
+					"dataSource": "Button",
+					"action": "cancel",
+					"text": "Close",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 64,
+					"left": 358,
+					"width": 60,
+					"height": 17,
+					"dataSource": "Button1",
+					"text": "Reset",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 64,
+					"left": 638,
+					"width": 60,
+					"height": 17,
+					"dataSource": "Button1",
+					"text": "Reset",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 606,
+					"left": 153,
+					"width": 100,
+					"height": 29,
+					"dataSource": "bEditName",
+					"text": "Edit Name",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 606,
+					"left": 263,
+					"width": 100,
+					"height": 29,
+					"dataSource": "bEditPassword",
+					"text": "Edit Password",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 606,
+					"left": 43,
+					"width": 100,
+					"height": 29,
+					"dataSource": "bAddUser",
+					"text": "Add User",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 606,
+					"left": 373,
+					"width": 100,
+					"height": 29,
+					"dataSource": "bDeleteUser",
+					"text": "Delete User",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

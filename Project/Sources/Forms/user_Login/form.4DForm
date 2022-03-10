@@ -1,0 +1,201 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 430,
+	"height": 220,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDataChange",
+		"onUnload",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter 8 1/2 x 11 in",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Line1": {
+					"type": "line",
+					"top": 69,
+					"left": 11,
+					"width": 398
+				},
+				"Line2": {
+					"type": "line",
+					"top": 72,
+					"left": 15,
+					"width": 398
+				},
+				"Text2": {
+					"type": "text",
+					"top": 109,
+					"left": 21,
+					"width": 94,
+					"height": 18,
+					"class": "Tahoma_14_Bold",
+					"textAlign": "right",
+					"text": "Username :",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 135,
+					"left": 21,
+					"width": 94,
+					"height": 18,
+					"class": "Tahoma_14_Bold",
+					"textAlign": "right",
+					"text": "Password :",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold"
+				},
+				"vtUsernameobj": {
+					"type": "input",
+					"top": 109,
+					"left": 123,
+					"width": 261,
+					"height": 18,
+					"dataSource": "vtUsername",
+					"class": "Tahoma_14_Bold",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 135,
+					"left": 123,
+					"width": 261,
+					"height": 18,
+					"dataSource": "vtPassword",
+					"class": "Tahoma_14_Bold",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 14
+				},
+				"Text4": {
+					"type": "text",
+					"top": 82,
+					"left": 12,
+					"width": 400,
+					"height": 17,
+					"class": "Tahoma_12_Bold",
+					"textAlign": "center",
+					"text": "<vtUser>",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"btLogin": {
+					"type": "button",
+					"text": "Log In",
+					"top": 173,
+					"left": 323,
+					"width": 86,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"defaultButton": true,
+					"dataSource": "btLogin",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"btCancel": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 173,
+					"left": 232,
+					"width": 86,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btCancel",
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold",
+					"action": "cancel"
+				},
+				"Text": {
+					"type": "text",
+					"text": "USER LOGIN",
+					"top": 30,
+					"left": 69,
+					"width": 265,
+					"height": 21,
+					"fontFamily": "Tahoma",
+					"fontSize": 16,
+					"fontWeight": "bold"
+				},
+				"Picture3": {
+					"type": "picture",
+					"top": 15,
+					"left": 14,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/User Login.png"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "<vtUserErrText>",
+					"top": 6,
+					"left": 285,
+					"width": 141,
+					"height": 21,
+					"fontTheme": "main",
+					"fontWeight": "bold",
+					"stroke": "#ff0000"
+				}
+			},
+			"entryOrder": [
+				"vtUsernameobj",
+				"Variable2",
+				"btLogin",
+				"btCancel"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 17
+}

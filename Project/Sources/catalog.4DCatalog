@@ -1,5 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="ObjSysAPIMaster" uuid="07F8373713014ADA833BF3733EB0049E" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
+	<table name="User" uuid="2D460712C97CE84FB19CC3A4B2540321" id="1">
+		<field name="UUID" uuid="F5F3128C2946EF46B8297CB151E69271" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="userID" uuid="2773A3ACF01D2D40BFE49430F63A08B6" type="4" unique="true" autosequence="true" never_null="true" id="2"/>
+		<field name="user_firstName" uuid="2208B614A20C524790874187E916EF1E" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="user_lastName" uuid="A63F9C976909714F9FC3198274539813" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="userName" uuid="613B27C3AFE8284CA6415E766811A607" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="userPassword" uuid="6A535F7425D7BF44B8EA9ADFD84E8058" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="userActive" uuid="EEF76E61FC760E41BE83D2D6003400B0" type="1" never_null="true" id="7"/>
+		<field name="userLastLogin" uuid="E6ACE430931F9C498A0E0D186E530CAF" type="8" never_null="true" id="8"/>
+		<primary_key field_name="UUID" field_uuid="F5F3128C2946EF46B8297CB151E69271"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="10">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="19" top="22" width="206" height="259.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="UserGroup" uuid="A0927E19D12993499DEC4D076003AFFE" id="2">
+		<field name="UUID" uuid="32F5215CE9AE804685341C373A699B79" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="userID" uuid="D4CAB42F9D0C62499B041130F63D27A3" type="4" never_null="true" id="2"/>
+		<field name="groupID" uuid="40A4CF734ACC0B4FABDDFEFA76B2C144" type="4" never_null="true" id="3">
+			<field_extra multi_line="false"/>
+		</field>
+		<primary_key field_name="UUID" field_uuid="32F5215CE9AE804685341C373A699B79"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="337" top="101" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Group" uuid="DAFBA5FEE3CF014CAC5274D6680CBD9C" id="3">
+		<field name="UUID" uuid="9DB8C2BAC4F0824894C90B75A266F6EE" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="groupID" uuid="1400842408017B48A4C87759562DF509" type="4" unique="true" autosequence="true" never_null="true" id="2"/>
+		<field name="groupName" uuid="16D2BEBEF3F600429755905CFEAE732B" type="10" limiting_length="255" never_null="true" id="3"/>
+		<primary_key field_name="UUID" field_uuid="9DB8C2BAC4F0824894C90B75A266F6EE"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="611" top="32" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="9A4846D23C261840B40A54385839C72B" name_Nto1="UserGroup_User" name_1toN="User_UserGroup" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1" integrity="delete">
+		<related_field kind="source">
+			<field_ref uuid="D4CAB42F9D0C62499B041130F63D27A3" name="userID">
+				<table_ref uuid="A0927E19D12993499DEC4D076003AFFE" name="UserGroup"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="2773A3ACF01D2D40BFE49430F63A08B6" name="userID">
+				<table_ref uuid="2D460712C97CE84FB19CC3A4B2540321" name="User"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B706569B4D9D7C4E93519F4BA54699D8" name_Nto1="UserGroup_Group" name_1toN="Group_UserGroup" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1" integrity="delete">
+		<related_field kind="source">
+			<field_ref uuid="40A4CF734ACC0B4FABDDFEFA76B2C144" name="groupID">
+				<table_ref uuid="A0927E19D12993499DEC4D076003AFFE" name="UserGroup"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="1400842408017B48A4C87759562DF509" name="groupID">
+				<table_ref uuid="DAFBA5FEE3CF014CAC5274D6680CBD9C" name="Group"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="11A8F8E478017F42AD8F3EF2DAEB4407" type="7">
+		<field_ref uuid="40A4CF734ACC0B4FABDDFEFA76B2C144" name="groupID">
+			<table_ref uuid="A0927E19D12993499DEC4D076003AFFE" name="UserGroup"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="317B2CF04CD81B42A80FA3871E1C515F" type="7">
+		<field_ref uuid="9DB8C2BAC4F0824894C90B75A266F6EE" name="UUID">
+			<table_ref uuid="DAFBA5FEE3CF014CAC5274D6680CBD9C" name="Group"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="3C9118EE5A289F4BBA4CC10787795DE1" type="7">
+		<field_ref uuid="32F5215CE9AE804685341C373A699B79" name="UUID">
+			<table_ref uuid="A0927E19D12993499DEC4D076003AFFE" name="UserGroup"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="48CFBB573D2ABD47AB5B0D3B479E7335" type="1">
+		<field_ref uuid="2773A3ACF01D2D40BFE49430F63A08B6" name="userID">
+			<table_ref uuid="2D460712C97CE84FB19CC3A4B2540321" name="User"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="506E5EED8EE01044AD1E00A78A03F98B" type="7">
+		<field_ref uuid="F5F3128C2946EF46B8297CB151E69271" name="UUID">
+			<table_ref uuid="2D460712C97CE84FB19CC3A4B2540321" name="User"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="83CB73C234D94E4890D80F86C5EC6929" type="1">
+		<field_ref uuid="1400842408017B48A4C87759562DF509" name="groupID">
+			<table_ref uuid="DAFBA5FEE3CF014CAC5274D6680CBD9C" name="Group"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D0D848915241FB4B8A1EB82A8EF48D65" type="7">
+		<field_ref uuid="D4CAB42F9D0C62499B041130F63D27A3" name="userID">
+			<table_ref uuid="A0927E19D12993499DEC4D076003AFFE" name="UserGroup"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0"/>
 </base>

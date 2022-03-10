@@ -1,0 +1,256 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 450,
+	"height": 250,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDataChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "Letter 8 1/2 x 11 in",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button2": {
+					"type": "button",
+					"top": 398,
+					"left": 259,
+					"width": 100,
+					"height": 30,
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"class": "Default",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 398,
+					"left": 361,
+					"width": 100,
+					"height": 30,
+					"dataSource": "bSubmit_OK",
+					"fontFamily": "Arial",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "",
+					"iconFrames": 4,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 404,
+					"left": 298,
+					"width": 56,
+					"height": 18,
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"text": "Cancel"
+				},
+				"CP_Text4": {
+					"type": "text",
+					"top": 134,
+					"left": 17,
+					"width": 179,
+					"height": 18,
+					"class": "Tahoma_14_Bold",
+					"fontWeight": "bold",
+					"text": "Enter NEW Password     :"
+				},
+				"CP_Text5": {
+					"type": "text",
+					"top": 160,
+					"left": 17,
+					"width": 179,
+					"height": 18,
+					"class": "Tahoma_14_Bold",
+					"fontWeight": "bold",
+					"text": "Confirm NEW Password :"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 404,
+					"left": 396,
+					"width": 58,
+					"height": 18,
+					"textAlign": "center",
+					"fontFamily": "Tahoma",
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"text": "Submit"
+				},
+				"ChngPwd_NewPwd": {
+					"type": "input",
+					"top": 134,
+					"left": 184,
+					"width": 243,
+					"height": 18,
+					"dataSource": "vChngPwd_NewPwd",
+					"class": "Tahoma_14_Bold",
+					"fontWeight": "bold",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ChngPwd_ConfPwd": {
+					"type": "input",
+					"top": 160,
+					"left": 184,
+					"width": 243,
+					"height": 18,
+					"dataSource": "vChngPwd_ConfPwd",
+					"class": "Tahoma_14_Bold",
+					"fontWeight": "bold",
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CP_Text1": {
+					"type": "text",
+					"top": 107,
+					"left": 67,
+					"width": 379,
+					"height": 18,
+					"class": "Tahoma_14_Bold",
+					"fontWeight": "bold",
+					"text": "Username : <vChngPwd_Username>",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"CP_Text2": {
+					"type": "text",
+					"top": 84,
+					"left": 67,
+					"width": 379,
+					"height": 18,
+					"class": "Tahoma_14_Bold",
+					"fontWeight": "bold",
+					"text": "Name : <vChngPwd_Name>",
+					"fontFamily": "Tahoma",
+					"fontSize": 12
+				},
+				"Text": {
+					"type": "text",
+					"top": 17,
+					"left": 71,
+					"width": 251,
+					"height": 24,
+					"sizingX": "grow",
+					"class": "Eras_Bold_ITC_20",
+					"text": "System Users",
+					"fontFamily": "Eras Bold ITC",
+					"fontSize": 20
+				},
+				"Picture3": {
+					"type": "picture",
+					"top": 9,
+					"left": 12,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/Users Icon.png"
+				},
+				"Line": {
+					"type": "line",
+					"top": 41,
+					"left": 65,
+					"width": 325
+				},
+				"Line1": {
+					"type": "line",
+					"top": 46,
+					"left": 65,
+					"width": 325
+				},
+				"Text1": {
+					"type": "text",
+					"top": 51,
+					"left": 82,
+					"width": 251,
+					"height": 24,
+					"sizingX": "grow",
+					"class": "Eras_Bold_ITC_20",
+					"text": "Change Password",
+					"fontFamily": "Eras Bold ITC",
+					"fontSize": 16
+				},
+				"bttnChangePw": {
+					"type": "button",
+					"top": 205,
+					"left": 310,
+					"width": 122,
+					"height": 30,
+					"dataSource": "bttnChangePw",
+					"action": "accept",
+					"text": "Change Password",
+					"class": "Eras_Bold_ITC_14",
+					"events": [
+						"onClick"
+					],
+					"defaultButton": true,
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				},
+				"Button3": {
+					"type": "button",
+					"top": 205,
+					"left": 203,
+					"width": 102,
+					"height": 30,
+					"dataSource": "Button",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "Eras_Bold_ITC_14",
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Tahoma",
+					"fontSize": 12,
+					"fontWeight": "bold"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 31
+}
